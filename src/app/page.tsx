@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,7 +10,12 @@ export default function Home() {
       <main className="flex-1 p-8">
         <h2 className="text-xl font-semibold mb-4">ようこそ！</h2>
         <p>ここからアプリの機能を構築していきます。</p>
-        <Button className="mt-4">これはボタンのサンプルです</Button>
+        <div className="mt-4 flex gap-4">
+          <Link href="/clients">
+            <Button>クライアント一覧へ</Button>
+          </Link>
+          <Button>これはボタンのサンプルです</Button>
+        </div>
       </main>
       <footer className="bg-muted text-muted-foreground p-4 text-center">
         <p>&copy; 2024 MEC Workspace</p>
