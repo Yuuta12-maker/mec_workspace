@@ -11,9 +11,11 @@ export default function Home() {
         <h2 className="text-xl font-semibold mb-4">ようこそ！</h2>
         <p>ここからアプリの機能を構築していきます。</p>
         <div className="mt-4 flex gap-4">
-          <Link href="/clients" asChild>
-            <Button>クライアント一覧へ</Button>
-          </Link>
+          <Button asChild>
+            <Link href="/clients">
+              クライアント一覧へ
+            </Link>
+          </Button>
           <Button>これはボタンのサンプルです</Button>
         </div>
       </main>
