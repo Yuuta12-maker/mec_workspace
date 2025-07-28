@@ -11,11 +11,9 @@ export default function Home() {
         <h2 className="text-xl font-semibold mb-4">ようこそ！</h2>
         <p>ここからアプリの機能を構築していきます。</p>
         <div className="mt-4 flex gap-4">
-          <Button asChild>
-            <Link href="/clients">
-              クライアント一覧へ
-            </Link>
-          </Button>
+          <Link href="/clients" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2">
+            クライアント一覧へ
+          </Link>
           <Button>これはボタンのサンプルです</Button>
         </div>
       </main>
