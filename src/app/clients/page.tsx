@@ -93,7 +93,7 @@ function NewClientForm({ onClientAdded }: { onClientAdded: () => void }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button>新規クライアント追加</Button>
+        <Button onClick={() => console.log("Button clicked!")}>新規クライアント追加</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
