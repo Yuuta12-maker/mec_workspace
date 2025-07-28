@@ -91,63 +91,7 @@ function NewClientForm({ onClientAdded }: { onClientAdded: () => void }) {
   }
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button>新規クライアント追加</Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>新規クライアント追加</DialogTitle>
-          <DialogDescription>
-            新しいクライアントの情報を入力してください。
-          </DialogDescription>
-        </DialogHeader>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>名前</FormLabel>
-                  <FormControl>
-                    <Input placeholder="山田 太郎" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>メールアドレス</FormLabel>
-                  <FormControl>
-                    <Input placeholder="taro.yamada@example.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>電話番号</FormLabel>
-                  <FormControl>
-                    <Input placeholder="090-1234-5678" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button type="submit">追加</Button>
-          </form>
-        </Form>
-      </DialogContent>
-    </Dialog>
+    <Button onClick={() => setOpen(true)}>新規クライアント追加 (テスト)</Button>
   );
 }
 
